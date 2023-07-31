@@ -34144,8 +34144,8 @@ var InstrumentosList = /*#__PURE__*/function (_React$Component2) {
     value: function render() {
       var instrumentos = this.props.instrumentos.map(function (instrumentos) {
         return /*#__PURE__*/React.createElement(Instrumentos, {
-          key: instrumento._links.self.href,
-          instrumento: instrumento
+          key: instrumentos._links.self.href,
+          instrumentos: instrumentos
         });
       });
       return /*#__PURE__*/React.createElement("table", null, /*#__PURE__*/React.createElement("tbody", null, /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("th", null, "nombre"), /*#__PURE__*/React.createElement("th", null, "categoria"), /*#__PURE__*/React.createElement("th", null, "Description")), instrumentos));
