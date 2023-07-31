@@ -18,6 +18,8 @@ public class DatabaseLoader implements CommandLineRunner {
 	@Override
 	public void run(String... strings) throws Exception {
 		this.repository.save(new Instrumento("Guitarra", "Viento", "de madera, con caja de resonancia, 6 cuerdas templadas"));
+		this.repository.save(new Instrumento("Ukele", "Cuerda", "pequeña, de madera"));
+		this.repository.save(new Instrumento("Melodica", "Viento", "teclado pequeño de 2 octavas"));
 
 	}
 }
