@@ -7,18 +7,16 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 
 @Entity
-public class Employee {
+public class Instrumento {
 
 	private @Id @GeneratedValue Long id;
-	private String firstName;
-	private String lastName;
+	private String nombre;
+	private String categoria;
 	private String description;
 
-	private Employee() {}
-
-	public Employee(String firstName, String lastName, String description) {
-		this.firstName = firstName;
-		this.lastName = lastName;
+	public Instrumento(String nombre, String categoria, String description) {
+		this.nombre = nombre;
+		this.categoria = categoria;
 		this.description = description;
 	}
 
@@ -26,17 +24,17 @@ public class Employee {
 	public boolean equals(Object o) {
 		if (this == o) return true;
 		if (o == null || getClass() != o.getClass()) return false;
-		Employee employee = (Employee) o;
+		Instrumento employee = (Instrumento) o;
 		return Objects.equals(id, employee.id) &&
-			Objects.equals(firstName, employee.firstName) &&
-			Objects.equals(lastName, employee.lastName) &&
+			Objects.equals(nombre, employee.nombre) &&
+			Objects.equals(categoria, employee.categoria) &&
 			Objects.equals(description, employee.description);
 	}
 
 	@Override
 	public int hashCode() {
 
-		return Objects.hash(id, firstName, lastName, description);
+		return Objects.hash(id, nombre, categoria, description);
 	}
 
 	public Long getId() {
@@ -48,19 +46,19 @@ public class Employee {
 	}
 
 	public String getFirstName() {
-		return firstName;
+		return nombre;
 	}
 
 	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+		this.categoria = firstName;
 	}
 
 	public String getLastName() {
-		return lastName;
+		return categoria;
 	}
 
 	public void setLastName(String lastName) {
-		this.lastName = lastName;
+		this.categoria = lastName;
 	}
 
 	public String getDescription() {
@@ -73,10 +71,10 @@ public class Employee {
 
 	@Override
 	public String toString() {
-		return "Employee{" +
+		return "Instrumento{" +
 			"id=" + id +
-			", firstName='" + firstName + '\'' +
-			", lastName='" + lastName + '\'' +
+			", nombre='" + nombre + '\'' +
+			", categoria='" + categoria + '\'' +
 			", description='" + description + '\'' +
 			'}';
 	}
