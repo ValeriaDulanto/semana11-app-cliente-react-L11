@@ -14,15 +14,15 @@ class App extends React.Component {
 	}
 	render() {
 		return (
-			<InstrumentosList instrumentos={this.state.instrumentos}/>
+			<InstrumentoList instrumentos={this.state.instrumentos}/>
 		)
 	}
 }
 
-class InstrumentosList extends React.Component{
+class InstrumentoList extends React.Component{
 	render() {
-		const instrumentos = this.props.instrumentos.map(instrumentos =>
-			<Instrumentos key={instrumentos._links.self.href} instrumentos={instrumentos}/>
+		const instrumentos = this.props.instrumentos.map(instrumento =>
+			<Instrumento key={instrumento._links.self.href} instrumento={instrumento}/>
 		);
 		return (
 			<table>
@@ -39,13 +39,13 @@ class InstrumentosList extends React.Component{
 	}
 }
 
-class Instrumentos extends React.Component{
+class Instrumento extends React.Component{
 	render() {
 		return (
 			<tr>
-				<td>{this.props.instrumentos.nombre}</td>
-				<td>{this.props.instrumentos.categoria}</td>
-				<td>{this.props.instrumentos.description}</td>
+				<td>{this.props.instrumento.nombre}</td>
+				<td>{this.props.instrumento.categoria}</td>
+				<td>{this.props.instrumento.description}</td>
 			</tr>
 		)
 	}
