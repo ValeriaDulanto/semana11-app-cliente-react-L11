@@ -24,11 +24,11 @@ public class Instrumento {
 	public boolean equals(Object o) {
 		if (this == o) return true;
 		if (o == null || getClass() != o.getClass()) return false;
-		Instrumento employee = (Instrumento) o;
-		return Objects.equals(id, employee.id) &&
-			Objects.equals(nombre, employee.nombre) &&
-			Objects.equals(categoria, employee.categoria) &&
-			Objects.equals(description, employee.description);
+		Instrumento instrumento = (Instrumento) o;
+		return Objects.equals(id, instrumento.id) &&
+			Objects.equals(nombre, instrumento.nombre) &&
+			Objects.equals(categoria, instrumento.categoria) &&
+			Objects.equals(description, instrumento.description);
 	}
 
 	@Override
@@ -45,20 +45,20 @@ public class Instrumento {
 		this.id = id;
 	}
 
-	public String getFirstName() {
+	public String getnombre() {
 		return nombre;
 	}
 
-	public void setFirstName(String firstName) {
-		this.categoria = firstName;
+	public void setnombre(String nombre) {
+		this.nombre = nombre;
 	}
 
-	public String getLastName() {
+	public String getcategoria() {
 		return categoria;
 	}
 
-	public void setLastName(String lastName) {
-		this.categoria = lastName;
+	public void setcategoria(String categoria) {
+		this.categoria = categoria;
 	}
 
 	public String getDescription() {
